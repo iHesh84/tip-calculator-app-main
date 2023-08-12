@@ -93,9 +93,13 @@ function removeError() {
 function showData() {
   tipAmountPerPersonText.textContent = "$" + tipAmountPerPerson();
   totalAmountPerPersonText.textContent = "$" + totalPerPerson();
+
+  document.querySelector(".reset__btn").classList.remove("inactive");
 }
 
 document.querySelector(".reset__btn").addEventListener("click", () => {
+  document.querySelector(".reset__btn").classList.add("inactive");
+
   removeError();
   billAmount.value = "";
   resetButtons();

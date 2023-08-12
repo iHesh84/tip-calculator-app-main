@@ -23,50 +23,52 @@
         <h2>TTER</h2>
       </div>
       <div class="container">
-        <div class="bill__container">
-          <p>Bill</p>
-          <div class="bill__input__container">
-            <img src="/images/icon-dollar.svg" alt="Dollar Icon" />
-            <input
-              placeholder="0"
-              class="bill__input"
-              type="text"
-              oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1'); this.value = this.value.replace(/^(-\d+)/, '$1');"
-            />
-          </div>
-        </div>
-        <div class="select-tip__container">
-          <p>Select Tip %</p>
-          <ol>
-            <li><button class="tip__btn">5%</button></li>
-            <li><button class="tip__btn">10%</button></li>
-            <li><button class="tip__btn">15%</button></li>
-            <li><button class="tip__btn">25%</button></li>
-            <li><button class="tip__btn">50%</button></li>
-            <li>
+        <div class="left">
+          <div class="bill__container">
+            <p>Bill</p>
+            <div class="bill__input__container">
+              <img src="/images/icon-dollar.svg" alt="Dollar Icon" />
               <input
-                id="customInput"
-                placeholder="Custom"
-                class="custom__btn"
+                placeholder="0"
+                class="bill__input"
                 type="text"
                 oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1'); this.value = this.value.replace(/^(-\d+)/, '$1');"
               />
-            </li>
-          </ol>
-        </div>
-        <div class="number-people__container">
-          <div class="error__hint__text__container">
-            <p>Number of People</p>
-            <p class="error__hint__text hidden">Can't be zero</p>
+            </div>
           </div>
-          <div class="number-people__input__container">
-            <img src="/images/icon-person.svg" alt="Person Icon" />
-            <input
-              placeholder="0"
-              class="number-people__input"
-              type="text"
-              oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.value = this.value.replace(/^-/, '');"
-            />
+          <div class="select-tip__container">
+            <p>Select Tip %</p>
+            <ol>
+              <li><button class="tip__btn">5%</button></li>
+              <li><button class="tip__btn">10%</button></li>
+              <li><button class="tip__btn">15%</button></li>
+              <li><button class="tip__btn">25%</button></li>
+              <li><button class="tip__btn">50%</button></li>
+              <li>
+                <input
+                  id="customInput"
+                  placeholder="Custom"
+                  class="custom__btn"
+                  type="text"
+                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1'); this.value = this.value.replace(/^(-\d+)/, '$1');"
+                />
+              </li>
+            </ol>
+          </div>
+          <div class="number-people__container">
+            <div class="error__hint__text__container">
+              <p>Number of People</p>
+              <p class="error__hint__text hidden">Can't be zero</p>
+            </div>
+            <div class="number-people__input__container">
+              <img src="/images/icon-person.svg" alt="Person Icon" />
+              <input
+                placeholder="0"
+                class="number-people__input"
+                type="text"
+                oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.value = this.value.replace(/^-/, '');"
+              />
+            </div>
           </div>
         </div>
         <div class="summary__container">
@@ -84,7 +86,7 @@
             </div>
             <p class="total__amount amount">$0.00</p>
           </div>
-          <button class="reset__btn">RESET</button>
+          <button class="reset__btn inactive">RESET</button>
         </div>
       </div>
     </main>

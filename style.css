@@ -253,3 +253,41 @@ ol button,
 .hidden {
   display: none;
 }
+
+.inactive {
+  background-color: #0C686D;
+}
+
+
+/* Media Query for Larger Screens */
+
+@media (min-width: 800px){
+  .container{
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 900px;
+  }
+
+  ol {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  ol button {
+    width: 120px;
+  }
+
+  .reset__btn{
+    margin-top: 7rem;
+  }
+
+  .amount{
+    font-size: 2.5rem;
+  }
+
+  .title {
+    margin-bottom: 4rem;
+  }
+}
