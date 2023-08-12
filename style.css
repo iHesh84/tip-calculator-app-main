@@ -128,7 +128,7 @@ main {
 .number-people__input {
   border: none;
   width: 100%;
-  direction: rtl;
+  text-align: end;
   background-color: var(--clr-very-light-grayish-cyan);
   color: var(--clr-very-dark-cyan);
   font-size: 1.5rem;
