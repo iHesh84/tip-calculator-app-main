@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+:root {
+  --clr-strong-cyan: hsl(172, 67%, 45%);
+
+  --clr-very-dark-cyan: hsl(183, 100%, 15%);
+  --clr-dark-grayish-cyan: hsl(186, 14%, 43%);
+  --clr-grayish-cyan: hsl(184, 14%, 56%);
+  --clr-light-grayish-cyan: hsl(185, 41%, 84%);
+  --clr-very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Space Mono", monospace;
+  background-color: var(--clr-light-grayish-cyan);
+}
+
+button,
+input {
+  cursor: pointer;
+}
+img {
+  width: auto;
+  height: 20px;
+  margin-left: 0.5rem;
+}
+
+p {
+  color: var(--clr-dark-grayish-cyan);
+}
+
+main {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.title {
+  text-align: center;
+  line-height: 2rem;
+  letter-spacing: 0.4rem;
+  color: var(--clr-very-dark-cyan);
+  margin: 2rem 0rem;
+}
+
+.container {
+  background-color: var(--clr-white);
+  width: 375px;
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+}
+
+.bill__input__container,
+.number-people__input__container {
+  display: flex;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--clr-very-light-grayish-cyan);
+  border-radius: 0.25rem;
+  margin-top: 0.25rem;
+  align-items: center;
+}
+
+.bill__input,
+.number-people__input {
+  border: none;
+  width: 100%;
+  direction: rtl;
+  background-color: var(--clr-very-light-grayish-cyan);
+  color: var(--clr-very-dark-cyan);
+  font-size: 1.5rem;
+}
+
+.bill__input,
+.number-people__input {
+  outline: none;
+}
+
+ol {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  padding: 0rem;
+  margin: 0.75rem 0rem 2rem 0rem;
+}
+
+ol button,
+.custom__btn {
+  width: 100%;
+  background-color: var(--clr-very-dark-cyan);
+  border-style: none;
+  border-radius: 0.25rem;
+  color: var(--clr-white);
+  font-size: 20px;
+  width: 140px;
+  padding: 0.25rem 0;
+}
+
+.selected {
+  background-color: var(--clr-strong-cyan);
+  color: var(--clr-very-dark-cyan);
+}
+
+.custom__btn {
+  background-color: var(--clr-very-light-grayish-cyan);
+  color: var(--clr-very-dark-cyan);
+  text-align: center;
+  direction: rtl;
+}
+
+.custom__btn:focus {
+  outline: var(--clr-strong-cyan) 1px solid;
+  caret-color: var(--clr-strong-cyan);
+}
+
+.tip__btn.selected,
+.tip__btn.selected:hover {
+  background-color: var(--clr-strong-cyan);
+}
+
+.tip__btn:hover:not(.selected) {
+  background-color: #9fe8df;
+  color: var(--clr-very-dark-cyan);
+}
+
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.summary__container {
+  padding: 1.5rem;
+  background-color: var(--clr-very-dark-cyan);
+  border-radius: 0.75rem;
+}
+
+.tip-amount__container,
+.total-amount__container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.amount {
+  display: flex;
+  align-items: center;
+  font-size: 1.75rem;
+}
+
+.white {
+  color: var(--clr-white);
+}
+
+.per-person__text {
+  color: var(--clr-grayish-cyan);
+}
+
+.amount {
+  color: var(--clr-strong-cyan);
+}
+
+.reset__btn {
+  background-color: var(--clr-strong-cyan);
+  border-style: none;
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  color: var(--clr-very-dark-cyan);
+  border-radius: 0.25rem;
+}
+
+.reset__btn:hover {
+  background-color: #9fe8df;
+}
+
+.error__hint__border {
+  border: #b47c6d 2px solid;
+}
+
+.error__hint__text__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error__hint__text {
+  color: #b47c6d;
+}
+
+.hidden {
+  display: none;
+}
